@@ -109,7 +109,7 @@ function getSubLrcids(root, arr)
         if (subRoots[i].nodeType==1)
         {
             //Process only element (nodeType 1) nodes
-            if (subRoots[i].nodeName == "lrcid")
+            if (subRoots[i].nodeName == "lrcid" && subRoots[i].childNodes[0].nodeValue != "0")
             {
                 arr.push(subRoots[i].childNodes[0].nodeValue);
             }
